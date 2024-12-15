@@ -20,7 +20,11 @@ hotshot은 내가 만든 라이브러리니깐 설치 시도하지 말 것!!
 
 4-3.완료 - PCA, PACF, 오버샘플링기존 코드 삭제
 
-4-4.GAN 기반 data augment 모듈 오버샘플링 모듈 자리에 추가
+4-4.완료 - GAN 기반 data augment 모듈 오버샘플링 모듈 자리에 추가
+
+4-5. 마지막 셀에서 PNL 비교 plotting : scaling+이동 지수합(prod())이 안된 데이터로 추정해야하는걸로 바꿀 것.
+
+4-6. 마지막셀 accuracy에서 모델 불러온거 compile cross entropy로 하는데, 이걸 custom_loss 쓰는걸로 바꿔야 함.
 
 5."딥-러닝"탭 첫 번째 셀에 하이퍼 파라미터 전부 선언하고 있으니 거기서 모델 튜닝할 것
 
