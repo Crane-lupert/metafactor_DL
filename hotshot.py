@@ -8,11 +8,11 @@ import gc
 import numpy as np
 import itertools
 from tqdm import tqdm
-from causalnex.structure.notears import from_pandas
-from causalnex.network import BayesianNetwork
-from econml.dr import DRLearner
-import dowhy
-from dowhy import CausalModel
+# from causalnex.structure.notears import from_pandas
+# from causalnex.network import BayesianNetwork
+# from econml.dr import DRLearner
+# import dowhy
+# from dowhy import CausalModel
 from sklearn.decomposition import PCA
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -73,7 +73,7 @@ def load_market_indices():
     )
 
     # 월말 종가지수로 리샘플링
-    market_indices = kospi_kosdaq_indices.resample('M').last()
+    market_indices = kospi_kosdaq_indices
 
     return market_indices
 
@@ -132,7 +132,7 @@ def load_risk_free_rate():
     )
 
     # 월말 금리로 리샘플링
-    rf_monthly = rf_indices.resample('M').last()
+    rf_monthly = rf_indices
     rf_monthly.columns = ['Risk_Free_Rate']
 
     return rf_monthly
@@ -152,7 +152,7 @@ def load_exchange_rate():
     )
 
     # 월말 환율로 리샘플링
-    exchange_rate = exchange_df.resample('M').last()
+    exchange_rate = exchange_df
     exchange_rate.columns = ['Exchange_Rate']
 
     return exchange_rate
